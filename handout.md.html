@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>handout</title>
+      <style>.markdown-preview, .markdown-preview[data-use-github-style] { font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif; font-size: 16px; line-height: 1.6; word-wrap: break-word; overflow: scroll; box-sizing: border-box; padding: 20px; background-color: rgb(255, 255, 255); }
+.markdown-preview > :first-child, .markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview > :last-child, .markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview a:not([href]), .markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview .absent, .markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview .anchor, .markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview .anchor:focus, .markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview h1, .markdown-preview[data-use-github-style] h1, .markdown-preview h2, .markdown-preview[data-use-github-style] h2, .markdown-preview h3, .markdown-preview[data-use-github-style] h3, .markdown-preview h4, .markdown-preview[data-use-github-style] h4, .markdown-preview h5, .markdown-preview[data-use-github-style] h5, .markdown-preview h6, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview h1 .octicon-link, .markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview h2 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview h3 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview h4 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview h5 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview h6 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview h1:hover .anchor, .markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview h2:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview h3:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview h4:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview h5:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview h6:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview h6:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview h1 tt, .markdown-preview[data-use-github-style] h1 tt, .markdown-preview h2 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview h3 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview h4 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview h5 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview h6 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview h1 code, .markdown-preview[data-use-github-style] h1 code, .markdown-preview h2 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview h3 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview h4 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview h5 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview h6 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview h1, .markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview h1 .anchor, .markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview h2, .markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview h2 .anchor, .markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview h3, .markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview h3 .anchor, .markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview h4, .markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview h4 .anchor, .markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview h5, .markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview h5 .anchor, .markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview h6, .markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview h6 .anchor, .markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview p, .markdown-preview[data-use-github-style] p, .markdown-preview blockquote, .markdown-preview[data-use-github-style] blockquote, .markdown-preview ul, .markdown-preview[data-use-github-style] ul, .markdown-preview ol, .markdown-preview[data-use-github-style] ol, .markdown-preview dl, .markdown-preview[data-use-github-style] dl, .markdown-preview table, .markdown-preview[data-use-github-style] table, .markdown-preview pre, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview hr, .markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; border: 0px none; background-color: rgb(231, 231, 231); }
+.markdown-preview ul, .markdown-preview[data-use-github-style] ul, .markdown-preview ol, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview ul.no-list, .markdown-preview[data-use-github-style] ul.no-list, .markdown-preview ol.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview ul ul, .markdown-preview[data-use-github-style] ul ul, .markdown-preview ul ol, .markdown-preview[data-use-github-style] ul ol, .markdown-preview ol ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview ol ul, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview li > p, .markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview dl, .markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview dl dt, .markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview dl dd, .markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview blockquote, .markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left-width: 4px; border-left-style: solid; border-left-color: rgb(221, 221, 221); }
+.markdown-preview blockquote > :first-child, .markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview blockquote > :last-child, .markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview table, .markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: normal; }
+.markdown-preview table th, .markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview table th, .markdown-preview[data-use-github-style] table th, .markdown-preview table td, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview table tr, .markdown-preview[data-use-github-style] table tr { border-top-width: 1px; border-top-style: solid; border-top-color: rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
+.markdown-preview table tr:nth-child(2n), .markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview img, .markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview .emoji, .markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview span.frame, .markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview span.frame > span, .markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview span.frame span img, .markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview span.frame span span, .markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview span.align-center, .markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview span.align-center > span, .markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview span.align-center span img, .markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview span.align-right, .markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview span.align-right > span, .markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview span.align-right span img, .markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview span.float-left, .markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview span.float-left span, .markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview span.float-right, .markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview span.float-right > span, .markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview code, .markdown-preview[data-use-github-style] code, .markdown-preview tt, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; border-radius: 3px; background-color: rgba(0, 0, 0, 0.0392157); }
+.markdown-preview code::before, .markdown-preview[data-use-github-style] code::before, .markdown-preview tt::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview code::after, .markdown-preview[data-use-github-style] code::after, .markdown-preview tt::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: ' '; }
+.markdown-preview code br, .markdown-preview[data-use-github-style] code br, .markdown-preview tt br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview del code, .markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview pre > code, .markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; border: 0px; background: transparent; }
+.markdown-preview .highlight, .markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview .highlight pre, .markdown-preview[data-use-github-style] .highlight pre, .markdown-preview pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; border-radius: 3px; background-color: rgb(247, 247, 247); }
+.markdown-preview .highlight pre, .markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview pre, .markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview pre code, .markdown-preview[data-use-github-style] pre code, .markdown-preview pre tt, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; border: 0px; background-color: transparent; }
+.markdown-preview pre code::before, .markdown-preview[data-use-github-style] pre code::before, .markdown-preview pre tt::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview pre code::after, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview pre tt::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview kbd, .markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; border-style: solid; border-width: 1px; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; background-color: rgb(252, 252, 252); }
+.markdown-preview, .markdown-preview[data-use-github-style], .markdown-preview code, .markdown-preview[data-use-github-style] code { color: rgb(51, 51, 51); }
+.markdown-preview h1, .markdown-preview[data-use-github-style] h1, .markdown-preview h2, .markdown-preview[data-use-github-style] h2, .markdown-preview h3, .markdown-preview[data-use-github-style] h3, .markdown-preview h4, .markdown-preview[data-use-github-style] h4, .markdown-preview h5, .markdown-preview[data-use-github-style] h5, .markdown-preview h6, .markdown-preview[data-use-github-style] h6 { -webkit-font-smoothing: antialiased; cursor: text; }
+.markdown-preview > h1:first-child, .markdown-preview[data-use-github-style] > h1:first-child, .markdown-preview > h1:first-child + h2, .markdown-preview[data-use-github-style] > h1:first-child + h2, .markdown-preview > h2:first-child, .markdown-preview[data-use-github-style] > h2:first-child, .markdown-preview > h3:first-child, .markdown-preview[data-use-github-style] > h3:first-child, .markdown-preview > h4:first-child, .markdown-preview[data-use-github-style] > h4:first-child, .markdown-preview > h5:first-child, .markdown-preview[data-use-github-style] > h5:first-child, .markdown-preview > h6:first-child, .markdown-preview[data-use-github-style] > h6:first-child { margin-top: 0px; padding-top: 0px; }
+.markdown-preview a, .markdown-preview[data-use-github-style] a, .markdown-preview a code, .markdown-preview[data-use-github-style] a code { color: rgb(65, 131, 196); }
+.markdown-preview a:first-child h1, .markdown-preview[data-use-github-style] a:first-child h1, .markdown-preview a:first-child h2, .markdown-preview[data-use-github-style] a:first-child h2, .markdown-preview a:first-child h3, .markdown-preview[data-use-github-style] a:first-child h3, .markdown-preview a:first-child h4, .markdown-preview[data-use-github-style] a:first-child h4, .markdown-preview a:first-child h5, .markdown-preview[data-use-github-style] a:first-child h5, .markdown-preview a:first-child h6, .markdown-preview[data-use-github-style] a:first-child h6 { margin-top: 0px; padding-top: 0px; }
+.markdown-preview h1 + p, .markdown-preview[data-use-github-style] h1 + p, .markdown-preview h2 + p, .markdown-preview[data-use-github-style] h2 + p, .markdown-preview h3 + p, .markdown-preview[data-use-github-style] h3 + p, .markdown-preview h4 + p, .markdown-preview[data-use-github-style] h4 + p, .markdown-preview h5 + p, .markdown-preview[data-use-github-style] h5 + p, .markdown-preview h6 + p, .markdown-preview[data-use-github-style] h6 + p { margin-top: 0px; }
+.markdown-preview li p.first, .markdown-preview[data-use-github-style] li p.first { display: inline-block; }
+.markdown-preview ul li > :first-child, .markdown-preview[data-use-github-style] ul li > :first-child, .markdown-preview ol li > :first-child, .markdown-preview[data-use-github-style] ol li > :first-child, .markdown-preview ul li ul:first-of-type, .markdown-preview[data-use-github-style] ul li ul:first-of-type, .markdown-preview ol li ul:first-of-type, .markdown-preview[data-use-github-style] ol li ul:first-of-type { margin-top: 0px; }
+.markdown-preview ol > li, .markdown-preview[data-use-github-style] ol > li { list-style-type: decimal; }
+.markdown-preview ul > li, .markdown-preview[data-use-github-style] ul > li { list-style-type: disc; }
+.markdown-preview dl dt:first-child, .markdown-preview[data-use-github-style] dl dt:first-child { padding: 0px; }
+.markdown-preview dl dt > :first-child, .markdown-preview[data-use-github-style] dl dt > :first-child { margin-top: 0px; }
+.markdown-preview dl dt > :last-child, .markdown-preview[data-use-github-style] dl dt > :last-child { margin-bottom: 0px; }
+.markdown-preview dl dd > :first-child, .markdown-preview[data-use-github-style] dl dd > :first-child { margin-top: 0px; }
+.markdown-preview dl dd > :last-child, .markdown-preview[data-use-github-style] dl dd > :last-child { margin-bottom: 0px; }
+.markdown-preview blockquote p, .markdown-preview[data-use-github-style] blockquote p { font-size: 16px; line-height: 1.5; }
+.markdown-preview pre.editor-colors, .markdown-preview[data-use-github-style] pre.editor-colors { padding: 16px; overflow: auto; font-size: 84%; line-height: 1.45; border-radius: 3px; background-color: rgb(21, 23, 24); }
+.markdown-preview pre.editor-colors, .markdown-preview[data-use-github-style] pre.editor-colors { margin-bottom: 16px; word-break: normal; }
+.markdown-preview code, .markdown-preview[data-use-github-style] code, .markdown-preview tt, .markdown-preview[data-use-github-style] tt, .markdown-preview pre.editor-colors, .markdown-preview[data-use-github-style] pre.editor-colors { font-family: Consolas, 'Liberation Mono', Courier, monospace; }
+.markdown-preview .emoji, .markdown-preview[data-use-github-style] .emoji { height: 20px; width: 20px; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 1px dashed rgba(250, 128, 114, 0.5);
+}
+
+.pre.editor-colors,
+.host {
+  background-color: #151718;
+  color: #d4d7d6;
+}
+.pre.editor-colors,
+.host {
+  background-color: #151718;
+  color: #d4d7d6;
+}
+.pre.editor-colors .wrap-guide,
+.host .wrap-guide {
+  background: rgba(245, 250, 255, 0.04);
+}
+.pre.editor-colors .indent-guide,
+.host .indent-guide {
+  color: rgba(245, 250, 255, 0.04);
+}
+.pre.editor-colors .invisible-character,
+.host .invisible-character {
+  color: rgba(255, 255, 255, 0.1);
+}
+.pre.editor-colors .gutter,
+.host .gutter {
+  background-color: #0e1112;
+  color: #404b53;
+}
+.pre.editor-colors .gutter .line-number,
+.host .gutter .line-number {
+  background: #0e1112;
+  color: #404b53;
+  padding-left: 10px;
+}
+.pre.editor-colors .gutter .line-number.cursor-line,
+.host .gutter .line-number.cursor-line {
+  background-color: #060708;
+  color: #55b5db;
+  font-weight: 100;
+}
+.pre.editor-colors .gutter .line-number.cursor-line-no-selection,
+.host .gutter .line-number.cursor-line-no-selection {
+  background-color: #060708 !important;
+  color: #55b5db;
+}
+.pre.editor-colors .gutter .line-number:hover,
+.host .gutter .line-number:hover {
+  background-color: #0e1112 !important;
+  color: #55b5db;
+}
+.pre.editor-colors .gutter .line-number.folded,
+.host .gutter .line-number.folded,
+.pre.editor-colors .gutter .line-number:after,
+.host .gutter .line-number:after,
+.pre.editor-colors .fold-marker:after,
+.host .fold-marker:after {
+  color: #FFF;
+  background: #404b53;
+}
+.pre.editor-colors .invisible,
+.host .invisible {
+  color: rgba(255, 255, 255, 0.1);
+}
+.pre.editor-colors .cursor,
+.host .cursor {
+  border-color: #d4d7d6 !important;
+  border-left: solid 2px;
+}
+.pre.editor-colors .selection .region,
+.host .selection .region {
+  background-color: rgba(85, 181, 219, 0.6);
+}
+.pre.editor-colors .scroll-view,
+.host .scroll-view {
+  padding-left: 10px;
+}
+.pre.editor-colors .line.cursor-line,
+.host .line.cursor-line {
+  background: rgba(0, 0, 0, 0.2) !important;
+  padding-left: 10px;
+  margin-left: -10px;
+}
+.comment {
+  color: #41535b;
+  background: none;
+}
+.keyword {
+  color: #9fca56;
+}
+.keyword.control {
+  color: #9fca56;
+}
+.keyword.operator {
+  color: #9fca56;
+}
+.keyword.other.special-method {
+  color: #9fca56;
+}
+.keyword.other.unit {
+  color: #9fca56;
+}
+.storage {
+  color: #e6cd69;
+}
+.storage.modifier {
+  color: #e6cd69;
+}
+.constant {
+  color: #cd3f45;
+}
+.constant.character.escape {
+  color: #cd3f45;
+}
+.constant.numeric {
+  color: #cd3f45;
+}
+.constant.other.color {
+  color: #cd3f45;
+}
+.constant.other.symbol {
+  color: #cd3f45;
+}
+.variable {
+  color: #9fca56;
+}
+.variable.interpolation {
+  color: #9fca56;
+}
+.variable.parameter.function {
+  color: #55b5db;
+}
+.invalid.illegal,
+.invalid.deprecated {
+  background: none;
+  color: #cd3f45;
+}
+.string {
+  color: #55b5db;
+}
+.string .constant {
+  color: #55b5db;
+}
+.string.regexp {
+  color: #55b5db;
+}
+.string.regexp .constant.character.escape,
+.string.regexp .source.ruby.embedded,
+.string.regexp .string.regexp.arbitrary-repitition {
+  color: #55b5db;
+}
+.string.regexp.group {
+  color: #55b5db;
+}
+.string.regexp.character-class {
+  color: #55b5db;
+}
+.string.regexp .source.ruby.embedded {
+  color: #55b5db;
+}
+.string .variable {
+  color: #9fca56;
+}
+.string.other.link {
+  color: #55b5db;
+}
+.source .string .source,
+.source .string .meta.embedded.line {
+  color: #55b5db;
+}
+.source .string .punctuation.section.embedded {
+  color: #55b5db;
+}
+.source .string .punctuation.section.embedded .source {
+  color: #55b5db;
+}
+.punctuation.terminator {
+  color: #858d8a;
+}
+.punctuation.separator {
+  color: #858d8a;
+}
+.punctuation.definition {
+  color: #858d8a;
+}
+.punctuation.definition.comment {
+  color: #41535b;
+}
+.punctuation.definition.string,
+.punctuation.definition.variable,
+.punctuation.definition.array {
+  color: #55b5db;
+}
+.punctuation.definition.parameters {
+  color: #d4d7d6;
+}
+.punctuation.definition.heading,
+.punctuation.definition.identity {
+  color: #d4d7d6;
+}
+.punctuation.definition.bold {
+  color: #d4d7d6;
+  font-weight: bold;
+}
+.punctuation.definition.italic {
+  color: #d4d7d6;
+  font-style: italic;
+}
+.punctuation.section.embedded {
+  color: #d4d7d6;
+}
+.support {
+  color: #a074c4;
+}
+.support.class {
+  color: #a074c4;
+}
+.support.function {
+  color: #a074c4;
+}
+.support.function.any-method {
+  color: #a074c4;
+}
+.support.constant {
+  color: #cd3f45;
+}
+.support.type.property-name.css {
+  color: #a074c4;
+}
+.source .entity.name.tag,
+.source .entity.other.attribute-name,
+.meta.tag.inline,
+.meta.tag.inline .entity {
+  color: #9fca56;
+}
+.tag,
+.tag .entity {
+  color: #55b5db;
+}
+.html .string {
+  color: #d4d7d6;
+}
+.html .punctuation.definition.tag {
+  color: #55b5db;
+}
+.html .entity.name.tag {
+  text-decoration: done;
+}
+.html .entity.name.tag.structure {
+  color: #55b5db;
+}
+.html .entity.name.tag.block {
+  color: #55b5db;
+}
+.html .entity.other.attribute-name {
+  color: #9fca56;
+}
+.entity {
+  color: #55b5db;
+}
+.entity.name.type {
+  color: #55b5db;
+  text-decoration: none;
+}
+.entity.other.inherited-class {
+  color: #55b5db;
+}
+.entity.name.function {
+  color: #55b5db;
+}
+.entity.name.class,
+.entity.name.type.class {
+  color: #55b5db;
+}
+.entity.name.section {
+  color: #55b5db;
+}
+.entity.name.tag {
+  color: #55b5db;
+  text-decoration: done;
+}
+.entity.other.attribute-name {
+  color: #9fca56;
+}
+.entity.other.attribute-name.id {
+  color: #9fca56;
+}
+.meta.link {
+  color: #d4d7d6;
+}
+.meta.require {
+  color: #d4d7d6;
+}
+.meta.brace.curly {
+  color: #858d8a;
+}
+.meta.brace.round {
+  color: #d4d7d6;
+}
+.meta.comma {
+  color: #858d8a;
+}
+.meta.selector {
+  color: #858d8a;
+}
+.meta.separator {
+  background-color: #858d8a;
+  color: #858d8a;
+}
+.none {
+  color: #d4d7d6;
+}
+.markup.bold {
+  color: #d4d7d6;
+  font-weight: bold;
+}
+.markup.changed {
+  color: #d4d7d6;
+}
+.markup.deleted {
+  color: #d4d7d6;
+}
+.markup.italic {
+  color: #d4d7d6;
+  font-style: italic;
+}
+.markup.heading .punctuation.definition.heading {
+  color: #d4d7d6;
+}
+.markup.inserted {
+  color: #d4d7d6;
+}
+.markup.list {
+  color: #d4d7d6;
+}
+.markup.quote {
+  color: #d4d7d6;
+}
+.markup.raw.inline {
+  color: #d4d7d6;
+}
+.source.gfm .markup {
+  -webkit-font-smoothing: auto;
+}
+.source.gfm .markup.heading {
+  color: #d4d7d6;
+}
+pre.editor-colors[mini] .scroll-view,
+.host(.mini) .scroll-view {
+  padding-left: 1px;
+}
+.bracket-matcher .region {
+  border-bottom: 1px solid #55b5db;
+  margin-top: 2px;
+}
+.html .meta.tag.any {
+  color: #9fca56;
+}
+.html .entity.name.tag.block,
+.html .entity.name.tag.inline,
+.html .entity.name.tag.name {
+  color: #55b5db;
+}
+.html .entity.other.attribute-name.id.html {
+  color: #9fca56;
+}
+.html .punctuation.separator.key-value {
+  color: #9fca56;
+}
+.html .string.quoted.double {
+  color: #cbe2a4;
+}
+.html .string.quoted.double .punctuation.definition.string.begin,
+.html .string.quoted.double .punctuation.definition.string.end {
+  color: #9fca56;
+}
+.html .string.quoted.double .punctuation.definition.string .separator.key-value.html {
+  color: #9fca56;
+}
+.jade {
+  color: #d4d7d6;
+}
+.jade .comment.jade {
+  color: #41535b;
+}
+.jade .storage.type.function.jade {
+  color: #9fca56;
+}
+.jade .meta.control.flow.jade {
+  color: #cd3f45;
+}
+.jade .source.script .meta.brace.round.js,
+.jade .source.script .meta.brace.curly.js {
+  color: #858d8a;
+}
+.jade .entity.name.tag.jade {
+  color: #55b5db;
+}
+.jade .storage.type.import.include.jade {
+  color: #cbe2a4;
+}
+.jade .variable.control.import.include.jade {
+  color: #9fca56;
+}
+.jade .constant.id {
+  color: #e6cd69;
+}
+.jade .constant.language.js {
+  color: #a074c4;
+}
+.jade .text.jade {
+  color: #d4d7d6;
+}
+.jade .punctuation.separator.key-value.jade {
+  color: #55b5db;
+}
+.jade .string.quoted.jade {
+  color: #d4d7d6;
+}
+.source.json .constant.language {
+  color: #cd3f45;
+}
+.source.json .meta.structure.dictionary.json .string.quoted.json {
+  color: #55b5db;
+}
+.source.json .meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.json {
+  color: #d4d7d6;
+}
+.source.json .meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.json .punctuation.definition.string {
+  color: #d4d7d6;
+}
+.source.json .meta.structure.dictionary.json .meta.structure.dictionary.value.json .meta.structure.dictionary.json .string.quoted.json {
+  color: #55b5db;
+}
+.source.json .meta.structure.dictionary.json .meta.structure.dictionary.value.json .meta.structure.dictionary.json .string.quoted.json .punctuation.definition.string {
+  color: #55b5db;
+}
+.source.json .meta.structure.dictionary.json .meta.structure.dictionary.value.json .meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.json {
+  color: #d4d7d6;
+}
+.source.json .meta.structure.dictionary.json .meta.structure.dictionary.value.json .meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.json .punctuation.definition.string {
+  color: #d4d7d6;
+}
+.mustache .meta.tag.template {
+  color: #9fca56;
+}
+.mustache .meta.tag.template .entity.name.tag {
+  color: #cbe2a4;
+}
+</style>
+  </head>
+  <body class='markdown-preview'><h1 id="-2015-i">課外プロジェクト 2015 実践的プログラミング I</h1>
+<p>2015 10/22 渡部未来</p>
+<h2 id="1-1-">1.1 演習の目的</h2>
+<p>普段使っているワークステーションに<strong>Git</strong>環境を構築し、
+Gitを実際に試してみよう。また、簡単なコーディング問題を通して、Gitによるソースコード管理の大切さを知ろう。</p>
+<h2 id="1-2-">1.2 演習の目標</h2>
+<ul>
+<li>Gitの導入</li>
+<li>プログラムのGit管理</li>
+<li>プログラミング言語Rubyの紹介</li>
+</ul>
+<h2 id="2-">2 シェルのカスタマイズ</h2>
+<p>開発を行うときには、ターミナルによる操作が多くなる。
+また、開発だけでなく会津大生が普段を過ごす上でも使用は必須である。
+シェルを整備するだけで作業の効率が何倍にも増すので、
+今回はシェルのカスタマイズの基本を紹介する。</p>
+<h3 id="2-1-">2.1 ログインシェルの設定</h3>
+<p>もし、ログインするときのシェルがcshの場合は
+以下のコマンドで変更をすることができる。今回は説明を統一するために<em>bash</em>を選ぼう。</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>$&nbsp;chsh</span></span></span></div></pre><p><em>chsh</em>コマンドでは、以下のように現在のシェルのパスと
+新しいシェルのパスの候補が聞かれるので、bashのパスを打ち込もう。
+打ち込んだあとに、ログインパスワードが聞かれるので入力すると、次回以降bashでログインすることができる。</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Old&nbsp;Shell:&nbsp;/usr/bin/csh</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>New&nbsp;Shell&nbsp;[&nbsp;/bin/sh&nbsp;/bin/csh&nbsp;/usr/local/bin/tcsh&nbsp;/usr/local/gnu/bin/bash&nbsp;]:</span></span></span></div></pre><h2 id="2-2-alias">2.2 alias</h2>
+<p>bashの設定を変更するには、ホームディレクトリの.bash_profileを変更しよう。
+ファイルの最後に以下の内容を追記しよう。</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>#&nbsp;lsを視覚的にわかりやすくする。</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>if&nbsp;[&nbsp;`uname`&nbsp;=&nbsp;&quot;Darwin&quot;&nbsp;];&nbsp;then</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>alias&nbsp;ls=&#39;ls&nbsp;-FGH&#39;</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>elif&nbsp;[&nbsp;`uname`&nbsp;=&nbsp;&quot;SunOS&quot;&nbsp;];&nbsp;then</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>alias&nbsp;ls=&#39;ls&nbsp;-F&nbsp;--color&#39;</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>fi</span></span></span></div></pre><p>普段<em>ls</em>を打つときは、カレントディレクトリのファイル情報が表示されるが、
+視覚的にファイル・ディレクトリ・実行ファイル・シンボリックリンクの見分けが付くように
+オプションを付けている。オプションの指定がMac端末とSolaris端末で違うので条件分岐をしている。</p>
+<h2 id="2-3-">2.3 プロファイルの再読み込み</h2>
+<p>2.2の変更は、bash_profileに変更を加えただけでは反映はされない。
+反映させるには、以下のコマンドを打てば反映される。</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>$&nbsp;source&nbsp;~/.bash_profile</span></span></span></div></pre><p>これで色が付いていれば、無事成功だ。</p>
+<h2 id="2-4-">2.4 プロンプト</h2>
+<p><em>cd</em>をするたびに、自分の位置を確認するために<em>pwd</em>をタイプしていないだろうか？
+頻繁に行っているならば、大きなタイムロスになってしまう。
+その場合には、プロンプトにカレントディレクトリを表示するほうが良い。
+以下の内容をbash_profileに追記すると良い。
+※ bashでは、=の後に空白を入れるとエラーになるため気をつける。</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>#&nbsp;プロンプトにカレントディレクトリを表示</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>export&nbsp;PS1=&#39;[&nbsp;\w&nbsp;]&nbsp;$&nbsp;&#39;</span></span></span></div></pre><p>\wという記号がカレントディレクトリを表示してくれる。残りの記号はお飾りなので、好みで変更して良い。
+変更が行えたら、2.3 プロファイルの再読み込みで変更を反映する。</p>
+<h2 id="2-5-">2.5 まとめ</h2>
+<p>この章では、普段一番触る機会が多いターミナルシェルの拡張の基本に触れた。
+環境をカスタマイズするときには、頻繁に触るものほど効果は絶大だ。
+さらに効率を求める場合には、エディタ(emacs, vim)の拡張などをしてみると良いだろう。</p>
+<h2 id="3-git">3 Git</h2>
+<p>Gitはソースコードに限らずファイルの変更を管理するためのツールである。
+Gitの解説はインターネット上で多く存在するので簡単に目を通してほしい。
+以下に参考にするサイトの一覧を載せる。</p>
+<ul>
+<li>サルでもわかるGit入門 (<a href="http://www.backlog.jp/git-guide/">http://www.backlog.jp/git-guide/</a>)</li>
+<li>イラストでわかる！ git入門の入門 (<a href="http://blog.asial.co.jp/894">http://blog.asial.co.jp/894</a>)</li>
+<li>もっと早く知りたかった！ Gitが鬼のようにわかるスライド厳選7選 (<a href="http://www.find-job.net/startup/7-git-slides">http://www.find-job.net/startup/7-git-slides</a>)</li>
+<li>無料電子書籍 Pro Git (<a href="http://progit-ja.github.io">http://progit-ja.github.io</a>) # かなり難解である。</li>
+</ul>
+<h2 id="3-1-git-">3.1 Gitの導入</h2>
+<p>Gitの概要がわかったところで学校の環境にGitを導入しよう。
+現在多くの環境では初期から<em>git</em>コマンドが使えるようになっている。
+しかし残念なことに学校の環境では、gitコマンドが使えないため、ソースコードを取得し
+make、コマンドパスを通すことでGitを導入する。</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>#&nbsp;ホームディレクトリに、独自でコマンドを入れるためのディレクトリを作る。</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>$&nbsp;cd&nbsp;$HOME&nbsp;&amp;&amp;&nbsp;mkdir&nbsp;local&nbsp;&amp;&amp;&nbsp;cd&nbsp;local</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>#&nbsp;直接Gitのページから取得してもよい。&nbsp;</span><span class="markup underline link https hyperlink"><span>https://git-scm.com</span></span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>#&nbsp;Solaris環境では、2.x&nbsp;系のバージョンはmakeに失敗した。</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>$&nbsp;wget&nbsp;</span><span class="markup underline link https hyperlink"><span>https://www.kernel.org/pub/software/scm/git/git-1.9.5.tar.gz</span></span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>$&nbsp;&nbsp;tar&nbsp;xvf&nbsp;git-1.9.5.tar.gz</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>$&nbsp;cd&nbsp;git-1.9.5</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>$&nbsp;./configure</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>#&nbsp;それなりに時間が掛かるのでGitの概要を勉強して待とう。</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>$&nbsp;make</span></span></span></div></pre><p>以上の作業が終了したらbash_profileを編集して、<em>$HOME/local/git-1.9.5</em>に
+パスを通そう。もし、パスの通し方を忘れた場合はリテラシーのハンドアウトや
+ネットで調べて確実に覚えておこう！(最重要！)</p>
+<h2 id="3-2-git-">3.2 Gitの練習</h2>
+<p><em>git</em> とターミナルにタイプし、正しく導入ができたらgitを練習してみよう。
+最初にgitの初期設定を以下のように行う。</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>#&nbsp;gitの変更履歴に残すための名前。自由で良い。</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>$&nbsp;git&nbsp;config&nbsp;--global&nbsp;user.name&nbsp;&quot;ユーザ名&quot;</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>#&nbsp;Slack登録時のメールアドレスなどが良い。</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>$&nbsp;git&nbsp;config&nbsp;--global&nbsp;user.email&nbsp;&quot;メールアドレス&quot;</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>#&nbsp;vim・emacsなどの好きなエディタを設定。</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>$&nbsp;git&nbsp;config&nbsp;--global&nbsp;core.editor&nbsp;&quot;vim&nbsp;or&nbsp;emacs&quot;</span></span></span></div></pre><p>Gitの練習には、「Gitをはじめからていねいに」(<a href="https://github.com/takanabe/introduction-to-git)&#x3068;&#x3044;&#x3046;&#x30DA;&#x30FC;&#x30B8;&#x3092;&#x4F7F;&#x3046;&#x3068;&#x3088;&#x3044;(&#x3053;&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x3082;Git&#x3067;&#x7BA1;&#x7406;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;)&#x3002;">https://github.com/takanabe/introduction-to-git)というページを使うとよい(このページもGitで管理されている)。</a>
+最初は、1~4 ひとりでつかう - どんどんコミット くらいまでやると良い。</p>
+<h2 id="3-3-github-">3.3 Github(課題)</h2>
+<p>Gitをローカルリポジトリで扱うだけでは、Gitの恩恵を半分以下にしてしまう。
+リモートリポジトリ(外部サーバー)を使うことで、
+ソースコードが失われるリスクを減らし、他人とのソースコード共有ができるようにしよう。
+リモートリポジトリを提供するサービスは以下の２つがある。</p>
+<ul>
+<li>Github (<a href="https://github.com">https://github.com</a>)</li>
+<li>Bitbucket (<a href="https://bitbucket.org">https://bitbucket.org</a>)</li>
+</ul>
+<p>GithubはGitを扱うサービスで一番有名なサービスで、多くの企業やエンジニアが利用している。
+プログラミングを勉強するときに、他人のソースコードを参考にするときはGithubを使うと良いだろう。
+このSCCPでもGithubを積極的に利用するのでアカウントを取得しよう。
+Githubはリポジトリを基本的に公開するようになっている。
+授業の課題などをGitで管理するときには、リポジトリの非公開を無料でおこなえるBitbucketを利用しよう。</p>
+<h3 id="3-3-1-github-ssh-">3.3.1 Github SSHの設定</h3>
+<p>ローカルリポジトリとリモートリポジトリのやりとりは、セキュアに行われる必要がある。
+Githubでは、https(SSL)とSSHの２つの手法を取っている。
+今回は、SSHを使った手法で通信をおこなう。
+SSHを行うための鍵(公開鍵と秘密鍵)を生成する。
+途中パスフレーズを聞かれるがブランクで良い。</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>$&nbsp;ssh-keygen&nbsp;-t&nbsp;rsa</span></span></span></div></pre><p>以下のディレクトリに移動すると公開鍵(id_rsa_2048_xxx.pub)
+と秘密鍵(id_rsa_2048_xxx)が確認できると思う。</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>$&nbsp;cd&nbsp;~/.ssh2</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>$&nbsp;ls&nbsp;-a&nbsp;(秘密鍵のパーミッションは閉じられている。)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>$&nbsp;more&nbsp;id_rsa_2048_*.pub</span></span></span></div></pre><p>Githubの設定ページ(トップ右上の自分のアイコンメニューからSettingのリンク)
+へ飛びSSH keysを設定しよう。(間違っても秘密鍵を設定しないように！)
+コメント類は削除し、ssh-rsa という文字列を文頭に付けてキーのみを貼り付けよう。</p>
+<h3 id="3-3-2-">3.3.2 課題の報告</h3>
+<p>Githubに適当なローカルリポジトリをコミットし、
+それができたらSlackへURLを貼ろう!(HTTPS経由にならないように)</p></body>
+</html>
