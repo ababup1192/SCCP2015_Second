@@ -149,6 +149,7 @@ SSHを行うための鍵(公開鍵と秘密鍵)を生成する。
 Githubの設定ページ(トップ右上の自分のアイコンメニューからSettingのリンク)
 へ飛びSSH keysを設定しよう。(間違っても秘密鍵を設定しないように！)
 コメント類は削除し、ssh-rsa という文字列を文頭に付けてキーのみを貼り付けよう。
+参考画像(https://github.com/ababup1192/SCCP2015_Second/blob/master/ssh_key_setting.png)
 
 ### 3.3.2 課題の報告
 Githubに適当なローカルリポジトリをコミットし、
